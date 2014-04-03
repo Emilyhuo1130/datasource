@@ -158,7 +158,7 @@
 			 <username>admin</username> 
 			 <password>admin</password> 
 			 <server>tomcat</server>
-			 <url>http://192.168.2.147:8080/manager/text</url>
+			 <url>http://192.168.2.148:8090/manager/text</url>
 			 <path>/interfaces</path>
 		</configuration>
 	   </plugin>
