@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+  <item text="信号系统" id="信号系统" open="1" call="1" select="0">
+    <item text="轨旁设备" id="轨旁设备">
+      <item text="道岔" id="道岔">
+        <item text="P01A(转辙机)" id="P01A(转辙机)"></item>
+        <item text="P03A(转辙机)" id="P03A(转辙机)"></item>
+        <item text="P05A(转辙机)" id="P05A(转辙机)"></item>
+        <item text="P07A(转辙机)" id="P07A(转辙机)"></item>
+      </item>
+      <item text="轨道区段" id="轨道区段">
+        <item text="T01A" id="T01A"></item>
+        <item text="T02A" id="T02A"></item>
+        <item text="T03A" id="T03A"></item>
+        <item text="T04A" id="T04A"></item>
+        <item text="T05A" id="T05A"></item>
+        <item text="T06A" id="T06A"></item>
+        <item text="T07A" id="T07A"></item>
+        <item text="T08A" id="T08A"></item>
+        <item text="T09A" id="T09A"></item>
+        <item text="T010A" id="T010A"></item>
+        <item text="T011A" id="T011A"></item>
+        <item text="T012A" id="T012A"></item>
+        <item text="T01B" id="T01B"></item>
+        <item text="T02B" id="T02B"></item>
+      </item>
+      <item text="信号机" id="信号机">
+        <item text="S01A-间隔信号机" id="S01A-间隔信号机"></item>
+        <item text="S03A-进站信号机" id="S03A-进站信号机"></item>
+        <item text="S05A-出站信号机" id="S05A-出站信号机"></item>
+        <item text="S07A-出站信号机" id="S07A-出站信号机"></item>
+        <item text="S09A-进站信号机" id="S09A-进站信号机"></item>
+        <item text="S11A-间隔信号机" id="S11A-间隔信号机"></item>
+        <item text="S13A-间隔信号机" id="S13A-间隔信号机"></item>
+        <item text="S15A-道岔防护信号机" id="S15A-道岔防护信号机"></item>
+        <item text="S17A-道岔防护信号机" id="S17A-道岔防护信号机"></item>
+        <item text="S19A-出站兼防护信号机" id="S19A-出站兼防护信号机"></item>
+        <item text="S21A-出站兼防护信号机" id="S21A-出站兼防护信号机"></item>
+        <item text="S102A-阻挡信号机" id="S102A-阻挡信号机"></item>
+        <item text="S104A-阻挡信号机" id="S104A-阻挡信号机"></item>
+      </item>
+      <item text="屏蔽门" id="屏蔽门"> </item>
+      <item text="防淹门" id="防淹门"> </item>
+      <item text="电源" id="电源">
+        <item text="外电网1路电源" id="外电网1路电源"></item>
+        <item text="外电网2路电源" id="外电网2路电源"></item>
+        <item text="电源屏输入电压电流" id="电源屏输入电压电流"></item>
+        <item text="电源屏输出电压电流" id="电源屏输出电压电流"></item>
+      </item>
+
+    </item>
+
+    <item text="室内设备" id="室内设备" >
+      <item text="CBI(联锁)" id="CBI(联锁)">
+        <item text="ZLC(联锁机)" id="ZLC(联锁机)"></item>
+        <item text="ZLC的深灰网" id="ZLC的深灰网"></item>
+        <item text="ZLC的浅灰网" id="ZLC的浅灰网"></item>
+        <item text="SDM(联锁维护台)" id="SDM(联锁维护台)"></item>
+        <item text="SDM的深灰网" id="SDM的深灰网"></item>
+        <item text="SDM的浅灰网" id="SDM的浅灰网"></item>
+        <item text="BRD(联锁设备板卡)" id="BRD(联锁设备板卡)"></item>
+        <item text="LEU(轨旁电子单元)" id="LEU(轨旁电子单元)"></item>
+        <item text="ESP(紧急停车按钮)" id="ESP(紧急停车按钮)"></item>
+        <item text="Point(道岔)" id="Point(道岔)"></item>
+        <item text="Signal(信号机)" id="Signal(信号机)"></item>
+      </item>
+      <item text="CATS(中心ATS服务器)" id="CATS(中心ATS服务器)">
+        <item text="中心工作站" id="中心工作站"></item>
+        <item text="车站ATS服务器" id="车站ATS服务器"></item>
+        <item text="MSS与ATS通信" id="MSS与ATS通信"></item>
+        <item text="用户操作界面" id="用户操作界面"></item>
+        <item text="数据库服务器" id="数据库服务器"></item>
+        <item text="前置机" id="前置机"></item>
+        <item text="网关计算机" id="网关计算机"></item>
+        <item text="打印机" id="打印机"></item>
+        <item text="接口计算机" id="接口计算机"></item>
+        <item text="中心ATS服务器" id="中心ATS服务器"></item>
+        <item text="大屏控制器" id="大屏控制器"></item>
+        <item text="ATS终端" id="ATS终端"></item>
+        <item text="屏蔽门接口" id="屏蔽门接口"></item>
+        <item text="综合监控系统接口" id="综合监控系统接口"></item>
+        <item text="时钟接口" id="时钟接口"></item>
+        <item text="发车指示器接口" id="发车指示器接口"></item>
+        <item text="无线接口" id="无线接口"></item>
+        <item text="COCC接口" id="COCC接口"></item>
+      </item>
+    </item>
+    <item text="网络设备" id="网络设备" open="1">
+      <item text="DCS(数据通信系统)" id="DCS(数据通信系统)">
+        <item text="IP服务器" id="IP服务器"></item>
+        <item text="SDH服务器" id="SDH服务器"></item>
+        <item text="光电转换器" id="光电转换器"></item>
+        <item text="3层电交换机" id="3层电交换机"></item>
+        <item text="2层电交换机" id="2层电交换机"></item>
+        <item text="3层光交换机" id="3层光交换机"></item>
+        <item text="无线调制解调器" id="无线调制解调器"></item>
+        <item text="无线接入点" id="无线接入点"></item>
+        <item text="CXL(LRU)" id="CXL(LRU)"></item>
+        <item text="SL(LRU)" id="SL(LRU)"></item>
+        <item text="EFS0(LRU)" id="EFS0(LRU)"></item>
+        <item text="EGS(LRU)" id="EGS(LRU)"></item>
+        <item text="ETF8(LRU)" id="ETF8(LRU)"></item>
+        <item text="AUX(LRU)" id="AUX(LRU)"></item>
+        <item text="SAP(LRU)" id="SAP(LRU)"></item>
+        <item text="EOW(LRU)" id="EOW(LRU)"></item>
+        <item text="PIU(LRU)" id="PIU(LRU)"></item>
+        <item text="风扇" id="风扇"></item>
+      </item>
+    </item>
+    <item text="轨旁ATC" id="轨旁ATC">
+      <item text="ATC_LC(线路控制器)" id="ATC_LC(线路控制器)">
+        <item text="区域控制器ZC" id="区域控制器ZC"></item>
+        <item text="主电源单元" id="主电源单元"></item>
+        <item text="风扇" id="风扇"></item>
+        <item text="电源单元" id="电源单元"></item>
+        <item text="计算通道" id="计算通道"></item>
+        <item text="多媒体卡" id="多媒体卡"></item>
+        <item text="ID插头" id="ID插头"></item>
+        <item text="以太网通信单元" id="以太网通信单元"></item>
+        <item text="输入输出电源单元" id="输入输出电源单元"></item>
+      </item>
+      <item text="ATC_ZC(区域控制器)" id="ATC_ZC(区域控制器)">
+        <item text="区域控制器LC" id="区域控制器LC"></item>
+        <item text="主电源单元" id="主电源单元"></item>
+        <item text="风扇" id="风扇"></item>
+        <item text="电源单元" id="电源单元"></item>
+        <item text="计算通道" id="计算通道"></item>
+        <item text="多媒体卡" id="多媒体卡"></item>
+        <item text="ID插头" id="ID插头"></item>
+        <item text="以太网通信单元" id="以太网通信单元"></item>
+        <item text="输入输出电源单元" id="输入输出电源单元"></item>
+      </item>
+    </item>
+    <item text="车载设备" id="车载设备">
+      <item text="ATC_CC(车载控制器)" id="ATC_CC(车载控制器)">
+        <item text="车载控制器CC" id="车载控制器CC"></item>
+        <item text="输入输出模块" id="输入输出模块"></item>
+        <item text="微处理器" id="微处理器"></item>
+        <item text="DLG板" id="DLG板"></item>
+        <item text="交换机" id="交换机"></item>
+        <item text="网关板" id="网关板"></item>
+        <item text="安全输入输出模块" id="安全输入输出模块"></item>
+        <item text="信标天线" id="信标天线"></item>
+        <item text="编码里程计" id="编码里程计"></item>
+        <item text="交换机" id="交换机"></item>
+        <item text="风扇单元" id="风扇单元"></item>
+      </item>
+    </item>
+  </item>
+  <item text="综合监控" id="magazines" open="0">
+
+  </item>
+  <item text="触网" id="item3" open="0">
+
+  </item>
+  <item text="轨道" id="item3" open="0">
+
+  </item>
+  <item text="隧道" id="item3" open="0">
+
+  </item>
+  <item text="桥梁" id="item3" open="0">
+
+  </item>
+  <item text="车辆" id="item3" open="0">
+
+  </item>
+</tree>

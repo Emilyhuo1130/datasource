@@ -1,0 +1,160 @@
+div#sub_nav {
+    background-image: url('../../images/table_title.png');
+    height: 30px;
+    padding-left: 20px;
+}
+
+div#operative_index_label {
+    height: 30px;
+    padding-left: 20px;
+}
+
+div#bigshot {
+    background-image: url('../../images/table_title.png');
+    height: 30px;
+    padding-left: 20px;
+}
+
+li.list_item {
+    display: inline-block;
+    padding: 0px 0px;
+}
+
+li.list_separator {
+    display: inline-block;
+    color: white;
+    text-shadow: #7f7f7f 0.1em 0.0em 0.1em;
+    font-size: 18px;
+    padding: 0px 2px;
+}
+
+li.list_item >a.normal {
+    color: black;
+    font-size: 14px;
+}
+
+li.list_item >a.selected {
+    color: #0989aa;
+    font-size: 14px;
+}
+
+li.list_item >a.normal:hover, li.list_item >a.normal:active {
+    color: #0989aa;
+    font-size: 14px;
+    text-decoration:none
+}
+
+a.Active {
+    color: black;
+    padding: 6px;
+    font-size: 14px;
+}
+
+a.Inactive {
+    color: gray;
+    padding: 4px;
+    font-size: 13px;
+}
+
+a.button_view {
+    display: inline-block;
+    vertical-align: middle;
+    color: #005569;
+    width: 52px;
+    height: 22px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+a.button_view:hover, a.button_view:active {
+    display: inline-block;
+    vertical-align: middle;
+    color: #CCA400;
+    width: 52px;
+    height: 22px;
+    font-weight: normal;
+    text-decoration:none;
+}
+
+
+a.button_trend {
+    display: inline-block;
+    vertical-align: middle;
+    color: #005569;
+    width: 52px;
+    height: 22px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+a.button_trend:hover, a.button_trend:active {
+    display: inline-block;
+    vertical-align: middle;
+    color: #CCA400;
+    width: 52px;
+    height: 22px;
+    font-weight: normal;
+    text-decoration:none;
+}
+
+div.image_view {
+    display: inline-block;
+    margin: 10px 2%;
+    width: 45%;
+    height: 300px;
+}
+
+/* device tree css*/
+div#device_tree_query_result {
+    /*margin-top: 20px;*/
+    width: 958px;
+    background-color: #f9f9fb;
+}
+
+div#device_tree {
+    display: inline-block;
+    /*padding: 20px 20px;*/
+    width: 30%;
+    border-right: 1px solid gray;
+}
+
+div#device_tree_info {
+    display: inline-block;
+    float: right;
+}
+
+a.save {
+    display: inline-block;
+    vertical-align: middle;
+    color: transparent;
+    background: url("../../images/button_save.png");
+    width: 66px;
+    height: 27px;
+}
+
+a.save:hover, a.save:active {
+    display: inline-block;
+    vertical-align: middle;
+    color: transparent;
+    background: 0px 27px url("../../images/button_save.png");
+    width: 66px;
+    height: 27px;
+}
+
+a.cancel {
+    display: inline-block;
+    vertical-align: middle;
+    color: transparent;
+    background: url("../../images/button_cancel.png");
+    width: 66px;
+    height: 27px;
+}
+
+a.cancel:hover, a.cancel:active {
+    display: inline-block;
+    vertical-align: middle;
+    color: transparent;
+    background: 0px 27px url("../../images/button_cancel.png");
+    width: 66px;
+    height: 27px;
+}

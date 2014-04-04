@@ -1,0 +1,23 @@
+#menu
+{
+	width:936px;
+	margin:0px auto;
+	padding-top:88px;
+	list-style-type:none;
+}
+#menu li{float:left;padding:0px 10px;}
+
+#nextimage
+{
+	background-repeat:repeat-x;
+}
+
+
+#menu2
+{
+	width:936px;
+	margin:0px auto;
+	padding-top:301px;
+	list-style-type:none;
+}
+#menu2 li{float:left;padding:0px 10px;}

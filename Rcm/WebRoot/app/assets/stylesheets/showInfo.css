@@ -1,0 +1,46 @@
+
+
+
+
+div.lineInfo
+{
+	
+    background-color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    color: #000;
+}
+div.lineInfo
+{
+    position: absolute;
+    z-index: 10;
+    min-width: 200px;
+    min-height: 150px;
+    display: none;
+    padding: 3px;
+    overflow: visible;
+    text-align: left;
+	left:50%;
+	top:17%
+}
+
+div.LineHealth
+{
+	
+    background-color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    color: #000;
+}
+div.LineHealth
+{
+    position: absolute;
+    z-index: 10;
+    min-width: 200px;
+    min-height: 150px;
+    display: none;
+    padding: 3px;
+    overflow: visible;
+    text-align: left;
+	left:50%;
+	top:50%
+}
+

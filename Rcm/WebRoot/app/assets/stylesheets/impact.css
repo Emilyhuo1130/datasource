@@ -1,0 +1,34 @@
+a.button_edit {
+    background-image: url('../../images/edit_normal.png');
+    display: inline-block;
+    vertical-align: middle;
+    width: 62px;
+    height: 27px;
+}
+
+a.button_edit:hover, a.button_edit:active {
+    background-image: url('../../images/edit_hover.png');
+    display: inline-block;
+    vertical-align: middle;
+    width: 62px;
+    height: 27px;
+    cursor: pointer;
+}
+
+
+a.button_save {
+    background-image: url('../../images/save_normal.png');
+    display: inline-block;
+    vertical-align: middle;
+    width: 62px;
+    height: 27px;
+}
+
+a.button_save:hover, a.button_save:active {
+    background-image: url('../../images/save_hover.png');
+    display: inline-block;
+    vertical-align: middle;
+    width: 62px;
+    height: 27px;
+    cursor: pointer;
+}

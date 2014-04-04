@@ -1,0 +1,74 @@
+<!DOCTYPE div PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+	<form action="#" method="post">
+  <div>
+    <div style="display:inline-block; width: 700px;margin-bottom: 15px;">
+      <div id="query_criteria" style="padding-top: 0px; width: 100%;">
+        <label for="condition1"></label>
+        <select id="condition1" class="combobox" name="criteria[condition1]">
+          <option>线路</option>
+          <option>option2</option>
+          <option>option3</option>
+          <option>option4</option>
+          <option>option5</option>
+        </select>
+        <label for="condition4"></label>
+        <select id="condition4" class="combobox" name="criteria[condition4]">
+          <option>健康指数</option>
+          <option>option2</option>
+          <option>option3</option>
+          <option>option4</option>
+          <option>option5</option>
+        </select>
+        <label for="start_time"><span style="color:black; font-size: 14px;">开始时间</span></label>
+        <input type="date" id="start_time" name="criteria[start_time]" style="height: 21px; width: 100px;" />
+        <label for="end_time"><span style="color:black; font-size: 14px;">结束时间</span></label>
+        <input type="date" id="end_time" name="criteria[end_time]" style="height: 21px;width: 100px;" />
+        <a style="float: right" class="button_query" onclick="OnOperativeQuery();" >
+        </a>
+      </div>
+    </div>
+  </div>
+</form>
+<div id="query_result" style="margin-top: 0px;">
+  <div style="background-image: url('../../images/table_background.png');">
+    <table class="query_result_table" id="operative_index_query_result_table" border="0" >
+      <caption>
+      </caption>
+      <thead>
+      <tr id="query_result_table_header">
+        <th scope="col" >序号</th>
+        <th scope="col" >线路</th>
+        <th scope="col" >健康指数</th>
+        <th scope="col" >一级报警数</th>
+        <th scope="col" >二级报警数</th>
+        <th scope="col" >三级报警数</th>
+        <th scope="col" >四级报警数</th>
+        <th scope="col" >时间</th>
+        <th scope="col" style="width: 80px;" ></th>
+      </tr>
+      </thead>
+      <tbody class="query_result_table_body" id="operative_index_query_result_table_body">
+      </tbody>
+    </table>
+  </div>
+  <div id="query_result_footer" style="width: 956px;">
+    <div id="query_result_footer_current_page">
+      <img src="../../images/previous_triangle.png" />
+      第 1 页
+      <img src="../../images/previous_triangle.png" style="transform:rotate(180deg);-webkit-transform:rotate(180deg);" />
+    </div>
+    <div id="query_result_footer_total_page">
+      共 10 页
+    </div>
+  </div>
+  <script type="text/javascript">
+    OnOperativeQuery();
+  </script>
+</div>
+	</body>
+</html>

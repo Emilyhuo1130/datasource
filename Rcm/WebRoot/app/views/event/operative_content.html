@@ -1,0 +1,51 @@
+<!DOCTYPE tr PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+		<table>
+			<% (Time.now.sec%5).times do |i| %>
+  <tr>
+    <td><%= i*3+1 %></td>
+    <td>综合监控</td>
+    <td>电力系统</td>
+    <td>十号线</td>
+    <td>良好</td>
+    <td>良好</td>
+    <td>良好</td>
+    <td><%= Time.now.strftime('%Y-%m-%d %H:%M:%S') %> </td>
+    <td><a href="#" style="color: #005569;">查看详情</a></td>
+  </tr>
+
+  <tr>
+    <td><%= i*3+2 %></td>
+    <td>信号系统</td>
+    <td>轨旁设备</td>
+    <td>十号线</td>
+    <td>良好</td>
+    <td>良好</td>
+    <td>良好</td>
+    <td><%= Time.now.strftime('%Y-%m-%d %H:%M:%S') %> </td>
+    <td><a href="#" style="color: #005569;">查看详情</a></td>
+  </tr>
+
+  <tr>
+    <td><%= i*3+3 %></td>
+    <td>综合监控</td>
+    <td>隧道设备</td>
+    <td>十号线</td>
+    <td>良好</td>
+    <td>良好</td>
+    <td>良好</td>
+    <td><%= Time.now.strftime('%Y-%m-%d %H:%M:%S') %> </td>
+    <td><a href="#" style="color: #005569;">查看详情</a></td>
+  </tr>
+<% end %>
+		</table>
+	</body>
+</html>
+
+
+
+

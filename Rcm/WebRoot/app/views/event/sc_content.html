@@ -1,0 +1,59 @@
+<!DOCTYPE meta PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+		<% (Time.now.sec%5).times do |i| %>
+		<table>
+  <tr>
+    <td><img src="../../images/red.gif" /></td>
+    <td><%= i*3 + 1 %></td>
+    <td><%= Random.rand(10000..20000) %> </td>
+    <td>电力设备</td>
+    <td>十号线</td>
+    <td>南京东路</td>
+    <td>高压开关</td>
+    <td>一级</td>
+    <td>失效</td>
+    <td>2013-05-01</td>
+    <td><a class="button_view" href="#">视图加载</a></td>
+    <td><a class="button_trend" href="#">趋势加载</a></td>
+
+  </tr>
+
+  <tr>
+    <td><img src="../../images/red.gif" /></td>
+    <td><%= i*3 + 2 %></td>
+    <td><%= Random.rand(10000..20000) %> </td>
+    <td>轨旁设备</td>
+    <td>十号线</td>
+    <td>南京东路</td>
+    <td>道岔</td>
+    <td>一级</td>
+    <td>故障告警</td>
+    <td>2013-05-01</td>
+    <td><a class="button_view" href="#">视图加载</a></td>
+    <td><a class="button_trend" href="#">趋势加载</a></td>
+
+  </tr>
+
+  <tr>
+    <td><img src="../../images/red.gif" /></td>
+    <td><%= i*3 + 3 %></td>
+    <td><%= Random.rand(10000..20000) %> </td>
+    <td>隧道设备</td>
+    <td>十号线</td>
+    <td>交通大学站</td>
+    <td>风机风扇</td>
+    <td>二级</td>
+    <td>预警</td>
+    <td>2013-05-01</td>
+    <td><a class="button_view" href="#">视图加载</a></td>
+    <td><a class="button_trend" href="#">趋势加载</a></td>
+  </tr>
+  </table>
+<% end %>		
+	</body>
+</html>
+

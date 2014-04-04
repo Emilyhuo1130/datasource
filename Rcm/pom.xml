@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>MavenTest</groupId>
+  <artifactId>Rcm</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name/>
+  <description/>
+  
+  
+  <dependencies>
+ 	 <!-- 
+  	<dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>bean-validator</artifactId>
+      <version>3.0-JBoss-4.0.2</version>
+    </dependency>
+	 -->
+	
+  </dependencies>
+  <build>
+	<finalName>${project.artifactId}</finalName>
+    <sourceDirectory>${basedir}/src</sourceDirectory>
+    <outputDirectory>${basedir}/WebRoot/WEB-INF/classes</outputDirectory>
+    <resources>
+      <resource>
+        <directory>${basedir}/src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <webappDirectory>${basedir}/WebRoot</webappDirectory>
+          <warSourceDirectory>${basedir}/WebRoot</warSourceDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+		  <encoding>UTF-8</encoding>
+          <compilerArguments>
+                <extdirs>${basedir}/WebRoot/WEB-INF/lib</extdirs>
+          </compilerArguments>
+        </configuration>
+      </plugin>
+      
+      <!-- tomcat 远程部署 -->
+       <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>tomcat-maven-plugin</artifactId> 
+        <version>1.1</version> 
+		<configuration>
+			 <update>true</update>
+			 <username>admin</username> 
+			 <password>admin</password> 
+			 <server>tomcat</server>
+			 <url>http://localhost:8090/manager/text</url>
+			 <path>/${project.artifactId}</path>
+		</configuration>
+	   </plugin>
+    </plugins>
+  </build>
+  <distributionManagement>  
+    <!-- 两个ID必须与 setting.xml中的<server><id>nexus-releases</id></server>保持一致-->  
+    
+    <repository>  
+        <id>nexus-releases</id>  
+        <name>Nexus Release Repository</name>  
+        <url>http://localhost:8081/nexus/content/repositories/releases</url>  
+    </repository>  
+    <snapshotRepository>  
+        <id>nexus-snapshots</id>  
+        <name>Nexus Snapshot Repository</name>  
+        <url>http://localhost:8081/nexus/content/repositories/snapshots</url>  
+    </snapshotRepository>  
+    
+</distributionManagement> 
+
+<properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+	<maven.compiler.encoding>UTF-8</maven.compiler.encoding>  
+</properties>
+ 
+
+
+</project>

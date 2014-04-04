@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<china>
+	<province name="吉林省">
+		<city>长春[吉林省]</city>
+		<city>吉林市[吉林省]</city>
+		<city>松原[吉林省]</city>
+		<city>通化[吉林省]</city>
+	</province>
+	<province name="辽宁省">
+		<city>沈阳[辽宁省]</city>
+		<city>大连[辽宁省]</city>
+		<city>鞍山[辽宁省]</city>
+		<city>抚顺[辽宁省]</city>
+		<city>铁岭[辽宁省]</city>
+	</province>
+	<province name="山东省">
+		<city>济南[山东省]</city>
+		<city>青岛[山东省]</city>
+		<city>威海[山东省]</city>
+	</province>
+</china>	

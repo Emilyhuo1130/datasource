@@ -1,0 +1,14 @@
+.button_login {
+    border: 0px solid transparent;
+    background: url("../../images/button_login.png") ;
+    width: 76px;
+    height: 23px;
+}
+
+.button_login:active, .button_login:hover {
+    border: 0px solid transparent;
+    background: 0px -23px url("../../images/button_login.png");
+    width: 76px;
+    height: 23px;
+    cursor: pointer;
+}

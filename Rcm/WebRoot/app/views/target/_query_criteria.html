@@ -1,0 +1,52 @@
+<!DOCTYPE div PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+	<%= form_tag do %>
+  <div>
+    <div style="display:inline-block;">
+      <div id="query_criteria" style="padding-top: 0px; width: 100%;">
+        <label for="condition1"></label>
+        <select id="condition1" class="combobox" name="criteria[condition1]">
+          <option>线路</option>
+          <option>option2</option>
+          <option>option3</option>
+          <option>option4</option>
+          <option>option5</option>
+        </select>
+
+
+
+        <label for="condition2"></label>
+        <select id="condition2" class="combobox" name="criteria[condition2]">
+          <option>月份</option>
+          <option>option2</option>
+          <option>option3</option>
+          <option>option4</option>
+          <option>option5</option>
+        </select>
+
+
+
+
+
+        <label for="start_time"><span style="color: black;">更新时间</span></label>
+        <input type="date" id="start_time" name="criteria[start_time]" style="height: 21px;" />
+        <label for="start_time"><span style="color: black;">至</span></label>
+        <input type="date" id="start_time" name="criteria[start_time]" style="height: 21px;" />
+        <a style="float: right" class="button_query" onclick="" >
+
+        </a>
+      </div>
+
+
+    </div>
+
+  </div>
+<% end %>
+	
+	</body>
+</html>
+

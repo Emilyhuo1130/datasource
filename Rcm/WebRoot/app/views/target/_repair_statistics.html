@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>主动维保平台</title>
+  <link type="text/css" rel="stylesheet" href="../../assets/stylesheets/main_page.css" /> 
+  <!--<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/application.css" />-->
+  <link type="text/css" rel="stylesheet" href="../../assets/stylesheets/alert.css" />
+  <link type="text/css" rel="stylesheet" href="../../assets/stylesheets/event.css" />
+  <link type="text/css" rel="stylesheet" href="../../assets/stylesheets/impact.css" />
+  <link type="text/css" rel="stylesheet" href="../../assets/stylesheets/dhtmlxTree/codebase/dhtmlxtree.css" />
+  <link type="text/css" rel="stylesheet" href="../../assets/stylesheets/d3/nv.d3.css" />
+  
+ <script language="JavaScript" src="../../assets/javascripts/application.js"></script>
+ <script language="JavaScript" src="../../assets/javascripts/main_page.js"></script>
+ <script language="JavaScript" src="../../assets/javascripts/alert.js"></script>
+ <script language="JavaScript" src="../../assets/javascripts/event.js"></script>
+ <script language="JavaScript" src="../../assets/javascripts/impact.js"></script>
+ <script language="JavaScript" src="../../assets/javascripts/jQueryUI/jquery-ui.js"></script> 
+ <script language="JavaScript" src="../../assets/javascripts/dhtmlxTree/codebase/dhtmlxcommon.js"></script>
+ <script language="JavaScript" src="../../assets/javascripts/dhtmlxTree/codebase/dhtmlxtree.js"></script>
+<script language="JavaScript" src="../../assets/javascripts/tabview/tabview.js"></script>
+<script language="JavaScript" src="../../assets/javascripts/d3/d3.v2.js"></script>
+<script language="JavaScript" src="../../assets/javascripts/d3/nv.d3.js"></script>
+</head>
+<body style="" >
+<div id="part1" >
+  <div id="header_background" >
+    <div id="header_title" >
+    <div style="display: inline-block;float: right;">
+        <a id="logout" href="/login/logout">退出</a>
+      </div>
+      <div style="display: inline-block;">主动维保平台</div> 
+      <div style="display: inline-block;float: right; margin-right: 10px;">
+       <span style="font-size: 14px; color: yellow; ">插入用户名</span>
+      </div>
+    </div>
+  </div>
+  <div id="navigation" >
+   <div class="nav_item_main" ><a id="Main" href="../layouts/application.html">首页</a></div>
+    <div class="nav_item_normal" ><a id="Alert" href="../alert/process_selector.html" >告警管理</a></div>
+    <div class="nav_item_normal" ><a id="Event" href="../event/_sc.html" >实件分析</a></div>
+    <div class="nav_item_normal" ><a id="Impact" href="../impact/show.html" >影响分析</a></div>
+    <div class="nav_item_normal" ><a id="Target" href="../target/_repair_statistics.html" >指标分析</a></div>
+    <div class="nav_item_normal" ><a id="Strategy" href="../strategy/show.html" >策略制定</a></div>
+    <div class="nav_item_normal" ><a id="Ticket" href="../ticket/_notification_ticket.html" >通知单</a></div>
+    <div class="nav_item_normal" ><a id="Report" href="../report/_alert_history_statistics.html" >报表管理</a></div>
+      
+  </div>
+</div>
+<div id="part2" >
+		<div style="margin-top: 20px;">
+  <div id="sub_nav">
+    <ul>
+      <li class="list_item">
+        <a  href="_repair_statistics.html">运营统计指标</a>
+      </li>
+      <li class="list_separator">
+        |
+      </li>
+      <li class="list_item">
+        <a  href="_operative_statistics.html">维修统计指标</a>
+      </li>
+    </ul>
+  </div>
+  <div style="max-width: 100%; border: 1px solid gray; border-top: none; background-color: #f9f9fb;">
+    <br/>
+    <div id="query_result" style="margin-top: 0px;">
+  <div style="background-image: url('/assets/table_background.png'); width: 942px; margin: auto;">
+    <table id="query_result_table" border="0" style="height: 260px;" >
+      <caption>
+      </caption>
+      <thead>
+      <tr id="query_result_table_header">
+        <th scope="col" >序号</th>
+        <th scope="col" >线路</th>
+        <th scope="col" >安全生产天数</th>
+        <th scope="col" >强迫停运天数</th>
+        <th scope="col" >非计划停运天数</th>
+        <th scope="col" >月份</th>
+        <th scope="col" >更新时间</th>
+      </tr>
+      </thead>
+      <tbody id="query_result_table_body">
+      </tbody>
+    </table>
+    <div id="query_result_footer" style="width: 940px;">
+      <div id="query_result_footer_current_page">
+        <img src="../../images/previous_triangle.png" />
+        第 1 页
+        <img src="../../images/previous_triangle.png" style="transform:rotate(180deg);-webkit-transform:rotate(180deg);" />
+      </div>
+     <!--<img src="" /> --> 
+      <div id="query_result_footer_total_page">
+        共 10 页
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    TableInitial('query_result_table', 7, 10);
+  </script>
+  <div style="height: 300px; width: 940px; margin:auto; border: 1px solid gray; margin-top: 8px;">
+    <div style="padding-left: 20px; padding-top: 20px;">
+      <label for="condition1"></label>
+      <select id="condition1" class="combobox" name="criteria[condition1]" style="width: 120px;">
+        <option>选择统计指标</option>
+        <option>option2</option>
+        <option>option3</option>
+        <option>option4</option>
+        <option>option5</option>
+      </select>
+
+      <label for="condition2"></label>
+      <select id="condition2" class="combobox" name="criteria[condition2]">
+        <option>选择月份</option>
+        <option>option2</option>
+        <option>option3</option>
+        <option>option4</option>
+        <option>option5</option>
+      </select>
+    </div>
+    <div id="chart1" style="margin: auto;width: 900px; ">
+      <svg style="height: 250px;"></svg>
+    </div>
+    <script type="text/javascript">
+      initMultiBarChart("#chart1 svg");
+    </script>
+  </div>
+
+  <div style="height: 300px; width: 940px; margin:auto; border: 1px solid gray; margin-top: 8px; margin-bottom: 8px;">
+    <div style="padding-left: 20px; padding-top: 20px;">
+      <label for="condition1"></label>
+      <select id="condition1" class="combobox" name="criteria[condition1]" style="width: 120px;">
+        <option>选择统计指标</option>
+        <option>option2</option>
+        <option>option3</option>
+        <option>option4</option>
+        <option>option5</option>
+      </select>
+
+      <label for="condition2"></label>
+      <select id="condition2" class="combobox" name="criteria[condition2]">
+        <option>线路（多选）</option>
+        <option>option2</option>
+        <option>option3</option>
+        <option>option4</option>
+        <option>option5</option>
+      </select>
+    </div>
+    <div id="chart2">
+      <svg style="height: 250px;"></svg>
+    </div>
+    <script type="text/javascript">
+      initTargetLineChart("#chart2 svg");
+    </script>
+  </div>
+</div>
+    <br/>
+  </div>
+</div>
+</div>
+
+<div id="part3" >
+  UCS Holdings CopyRight 2013
+</div>
+
+</body>
+<script type="text/javascript">
+  HighlightNav('spage_name');
+</script>
+</html>
