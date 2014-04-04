@@ -1,0 +1,1 @@
+[{"local_ip":"31231","pic_m":{"picShow":"1","resFolder":"213","random":true,"time":12312},"pic_s":{"picIn":"1","picout":"1","resFolder":"231423","random":true,"time":31312}}]

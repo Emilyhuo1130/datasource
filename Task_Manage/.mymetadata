@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Task_Manage"
+  id="myeclipse.1375083146575"
+  context-root="/Task_Manage"
+  j2ee-spec="5.0"
+  archive="Task_Manage.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

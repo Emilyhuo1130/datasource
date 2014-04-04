@@ -1,0 +1,116 @@
+
+.table{
+	width:900px;
+	height:300px;
+	background-color:#ffffff;
+}
+.table tr:hover{
+	background-color:#eeeeaa; 
+}
+.normalbtn{
+	width:100px;
+	height:30px;
+	background-image:url('../images/normalbtn.png');
+	
+}
+.normalbtn:hover{
+	width:100px;
+	height:30px;
+	background-image:url('../images/dhbutton04.gif');
+	opacity:.7;
+}
+.button{
+	width:100px;
+	height:29px;
+	background-image:url('../images/dhbutton04.gif');
+	
+}
+.button:hover{
+	cursor:pointer;
+	opacity:.7;
+	
+}
+#save{
+	width:100px;
+	height:30px;
+	background-image:url('../images/dhbutton04.gif');
+}
+#cancel{
+	width:100px;
+	height:30px;
+	background-image:url('../images/dhbutton04.gif');
+}
+#save:hover{
+	cursor:pointer;
+	opacity:.7;
+	width:100px;
+	height:30px;
+	background-image:url('../images/dhbutton04.gif');
+}
+#cancel:hover{
+	cursor:pointer;
+	opacity:.7;
+	width:100px;
+	height:30px;
+	background-image:url('../images/dhbutton04.gif');
+}
+thead{
+	width:900px;
+	height:30px;
+	background-color:#cccccc;
+	
+}
+
+div select{
+	width:100px;
+	
+}
+
+.formFrame{
+	width:900px;
+	height:400px;
+}
+#save_button{
+	position:relative;
+	left:300px;
+}
+/* 正文：分页功能区 */
+#pages
+{
+    width: 940px;
+    text-align: center;
+    height: 28px;
+    color:black;
+    line-height: 28px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+#pages a, #pages a.current_page:hover
+{
+    padding: 5px 10px;
+    color:black;
+    font-weight:bold;
+    text-decoration: none;
+    background-color:#ccccff;
+   
+}
+
+
+#pages a:hover
+{
+	font-weight:bold;
+    padding: 5px 9px;
+    opacity:.5;
+}
+
+.span{
+	font-size:1.5em;
+	font-weight:bold;
+}
+//页码当前页样式
+
+textarea{
+	width:600px;
+	height:100px;
+	resize:none;
+}

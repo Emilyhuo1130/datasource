@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ucs.cctv.Pojo">
+    <class name="OperatorInfo" table="operator_info" catalog="cctv_manage">
+        <id name="operatorId" type="java.lang.Integer">
+            <column name="operator_id" />
+            <generator class="identity" />
+        </id>
+        <property name="operatorName" type="string">
+            <column name="operator_Name" length="50" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phone_Number" length="50" />
+        </property>
+        <property name="operatorLevel" type="string">
+            <column name="operator_Level" length="50" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" />
+        </property>
+        <property name="operatorAccount" type="string">
+            <column name="operator_Account" length="50" not-null="true" />
+        </property>
+        <property name="operatorPw" type="string">
+            <column name="operator_Passwd" length="50" not-null="true" />
+        </property>
+         <set name ="monitorGroups" table="operator_group"  cascade="save-update" lazy="false">
+            <key column="operator_id"/>
+            <many-to-many column="group_id" class="MonitorGroup"/>
+        </set>
+    </class>
+</hibernate-mapping>

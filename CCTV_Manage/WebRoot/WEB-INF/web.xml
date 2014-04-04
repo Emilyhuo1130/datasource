@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+id="WebApp_ID" version="2.5">   
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<description>加载/WEB-INF/spring-mvc/目录下的所有XML作为Spring MVC的配置文件</description>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-hibernate/*.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dispatchOptionsRequest</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<listener>
+     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+   </listener>
+   <!-- 过滤器 -->
+     <filter>
+    	<filter-name>OpenSessionInViewFilter</filter-name>
+    	<filter-class>
+   			 org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+  		 </filter-class>
+    <init-param>
+   	   <param-name>sessionFactoryBeanName</param-name>
+     	 <param-value>sessionFactory</param-value>
+    </init-param>
+    <init-param>
+    	  <param-name>singleSession</param-name>
+    	  <param-value>true</param-value>
+    </init-param>
+    <init-param>
+     	 <param-name>flushMode</param-name>
+    	  <param-value>AUTO </param-value>
+    </init-param>
+  </filter>
+  
+  
+	<servlet>
+		<servlet-name>log4j-init</servlet-name>
+		<servlet-class>com.ucs.cctv.InitLog.Log4jInit</servlet-class>
+		<init-param>
+			<param-name>log4j</param-name>
+			<param-value>/WEB-INF/classes/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+<!-- 拦截所有的jsp页面 -->
+	 <filter>
+	    <filter-name>ValidateUser</filter-name>
+	    <filter-class>com.ucs.cctv.interceptor.ValidateUser</filter-class>
+	  </filter>
+	  <filter-mapping>
+	    <filter-name>ValidateUser</filter-name>
+	    <url-pattern>*.jsp</url-pattern>
+	  </filter-mapping>
+	
+</web-app>  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <script language="javascript" src="jquery-1.4.2.min.js"
+			type="text/javascript"></script>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript">
+	$(function(){
+	    var template = $('#attendees .attendee:first').clone();
+	    var attendeesCount = 1;
+	    window.addAttendee = function(){
+	        attendeesCount++;
+	        var attendee = template.clone().find(':input').each(function(){
+	            var newId = this.id.substring(0, this.id.length-1) + attendeesCount;
+	            
+	            $(this).prev().attr('for', newId); // update label for
+	            this.name = this.id = newId; // update id and name (assume the same)
+	        }).end()
+	        .attr('id', 'att' + attendeesCount)
+	        .prependTo('#attendees');
+	    };
+	    $('.add').click(addAttendee);
+	});
+	function test(){
+		alert($("#sel option")[0].value+","+$("#sel option")[0].innerHTML);
+	}
+	</script>
+  </head>
+  
+  <body>
+    <div id="attendees">
+            <div id="att1" class="attendee">
+                    <fieldset>
+                        <legend><span class="legend">Attendee 1 Booking Details</span></legend>
+                        <p name="test">
+                        <label for="A_Title_1">Title: <span class="req">*</span></label>
+                        <input name="A_Title_1" id="A_Title_1" value="" type="text" class="f_input" />
+                        </p>
+
+                        <p>
+                        <label for="A_Forename_1">Forename: <span class="req">*</span></label>
+                        <input name="A_Forename_1" id="A_Forename_1" type="text" class="f_input" />
+                        </p>
+
+                        <p>
+                        <label for="A_Surname_1">Surname: <span class="req">*</span></label>
+                        <input name="A_Surname_1" id="A_Surname_1" type="text" class="f_input" />
+                        </p>
+
+                        <p>
+                        <label for="A_Info_1">Additional Info: </label>
+                        <textarea name="A_Info_1" id="A_Info_1" cols="20" rows="10"></textarea>
+                        <span class="info">Please include any infomation relating to dietary/ access/special requirements you might have.</span>
+                        </p>
+                    </fieldset>
+                    </div>
+<a href="#" class="add">Add more</a>
+	<select id="sel">
+		<option value="a">---aaa---</option>
+		<option value="b">---bbb---</option>
+	</select>
+	<button onclick="test();">test</button>
+    </div>​
+  </body>
+</html>

@@ -1,0 +1,13 @@
+INFO main  - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main  - This is userFrom Json string:{"name":"gao","password":"1111"}
+     INFO main  - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main  - This is userFrom Json string:{"name":"gao","password":"1111"}
+     INFO main  - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main  - This is userFrom Json string:{"name":"gao","password":"1111"}
+     INFO main aaa - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main aaa - This is userFrom Json string:{"name":"gao","password":"1111"}
+     INFO main test.TestGson - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main test.TestGson - This is userFrom Json string:{"name":"gao","password":"1111"}
+     INFO main 很好 - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main 很好 - This is userFrom Json string:{"name":"gao","password":"1111"}
+     

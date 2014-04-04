@@ -1,0 +1,453 @@
+html { overflow: hidden; }
+.fieldset{
+	width:800px;
+}
+
+#form1{
+	padding-left:250px;
+}
+#submit_button{
+	
+	position:relative;
+	left:500px;
+}
+#c_submit{
+	text-align:center;
+}
+
+.bgm{
+	background-image: url(../../images/bank.jpg)
+}
+#thead{
+	width:1243px;
+	height:86px;
+	background-image: url(../../images/header_background.png);
+	margin:auto;
+	
+}
+#header_title {
+    font-family: "黑体";
+	font-stretch:inherit;
+	font-size: 34px;
+	font-style:inherit;
+	font-weight:bold;
+	max-width:900px;
+	height:55px;
+	text-align:left;
+	line-height:55px;
+	text-shadow:rgb(33, 33, 33) 0.1em 0.1em 0.1em;
+	color:#FAF7F7;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+.nav_item_main {
+	margin-left:30px;
+	padding-left:1%;
+	padding-right:1%;
+	height:100%;
+	line-height:40px;
+	color:#0000FF;
+	display:inline-block;
+	text-align:center;
+    font-size: 16px;
+    float: left;
+	padding: 0 14px;
+	
+}
+
+.nav_item_normal {
+	display:inline-block;
+	padding-left:1%;
+	padding-right:1%;
+	height:100%;
+	line-height:40px;
+	color:#FFFFFF;
+	text-align:center;
+    font-size: 16px;
+  	 position:relative;
+    left:170px;
+	padding: 0 14px;
+}
+
+#navi
+{
+    background: url(....//images/navigation.png) repeat-x;
+}
+#navigation {
+	max-width:960px;
+	height:40px;
+	background-image:url("../../images/navigation_background.png");
+	margin:-20px auto auto auto;
+	font-weight:bold;
+}
+
+a:hover, a:active {
+    color: #cba300;
+   
+    text-decoration: underline;
+}
+a:visited {
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+    text-shadow:rgb(255, 255, 255) 0.1em 0.1em 0.0em;
+}
+table tr td{
+	font-size:.875em;
+	width:200px;
+	
+}
+
+table tr td span{
+	font-size:.875em;
+	color:#000000;
+	font-weight:bold;
+	text-align:right;
+}
+div span{
+	font-size:.675em;
+	color:#000000;
+	font-weight:bold;
+	text-align:right;
+}
+
+select{
+	width:155px;
+	height:22px;
+}
+
+div#sub_nav {
+    background-image: url('../../images/table_title.png');
+    height: 30px;
+    padding-left: 20px;
+}
+div#sub_nav_long {
+    background-image: url('../../images/table_title_1110.png');
+    height: 30px;
+    padding-left: 20px;
+}
+
+.table_linkageSet{
+	padding-left:220px;
+	height:320px;	
+}
+.table_clentCfg{
+	padding-left:220px;
+}
+.table_Cfg{
+	padding-left:220px;
+	line-height:30px;
+}
+#part2 {
+    max-width:960px;
+    margin:0 auto 0 auto;
+    color: deepskyblue;
+}
+
+#part3 {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 8px;
+    color: grey;
+    height: 28px;
+    line-height: 28px;
+
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../../images/footer.png");
+}
+
+#query_result_footer {
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #09566a;
+    width: 936px;
+    border: 1px solid #a0a0a0;
+    background-color: #cccccc;
+}
+
+#query_result_footer_total_page {
+    text-align: left;
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 20px;
+
+}
+
+.query_result_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-right: 1px #a0a0a0 solid;
+    border-left: 1px #a0a0a0 solid;
+}
+
+#query_result_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-right: 1px #a0a0a0 solid;
+    border-left: 1px #a0a0a0 solid;
+    //display: inline-table;
+}
+
+#query_result_table_header {
+    background: url("../../images/table_header.png") transparent;
+    font-size: 13px;
+    color: #424242;
+    height: 26px;
+    //display: inline-table;
+}
+
+
+#query_result_footer_total_page {
+    text-align: left;
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 10px;
+
+}
+
+#query_result_footer {
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #09566a;
+    width: 936px;
+    border: 1px solid #a0a0a0;
+    background-color: #cccccc;
+}
+
+#table_bgm{
+	background-image:url('../../images/table_background.png');
+}
+
+fieldset legend{
+	color:#000000;
+	font-family: sans-serif;
+	font-size:.875em;
+}
+table .tr{
+	text-align:left;
+}
+
+.input_text{
+	width:150px;
+}
+
+
+.button_add{
+	width:160px;
+	height:35px;
+	font-size:.75em;
+	font-weight:bold;
+	cursor:pointer;
+	
+}
+
+.file-box{ position:relative;width:340px} 
+.txt{ height:22px; border:1px solid #cdcdcd; width:80px;} 
+.btn{ background-color:#FFF; border:1px solid #CDCDCD;height:30px; width:70px;} 
+.file{ position:absolute; top:0; right:80px; height:24px; filter:alpha(opacity:0);opacity: 0;width:260px }
+
+input.input_content {
+    background-color: transparent;
+    width: 100%;
+}
+
+.button_login {
+	position:relative;
+	top:25px;
+	right:0px;
+    border: 0px solid transparent;
+    background: url("../../images/login_button.png") ;
+    width: 100px;
+    height: 30px;
+}
+.button_login:hover {
+    cursor:pointer;
+    background: url("../../images/login_button_hover.png") ;
+}
+
+#query_result_table_body tr td{
+	text-align:center;
+	color:black;
+}
+#c_div{
+		position:relative;
+		top:5%;
+		left:-30%;
+}
+
+.exit a{
+	font-size:1.75em;
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+	float:right;
+	position:relative;
+	top:-25px;
+	right:50px;
+	
+}
+.exit a:hover{
+	
+	cursor:pointer;
+	
+	text-decoration:underline;
+	
+}
+
+#pre_page:hover{
+	cursor:pointer;
+}
+
+#next_page:hover{
+	cursor:pointer;
+}
+
+#select_clientCode{
+	width:828px;
+	height:200px;
+}
+#pre_div{
+	position:relative;
+	top:35px;
+	left:-1px;	
+	width:826px;
+	height:50px;
+	border:2px solid #aaaaaa;
+	background-color:#ffffcc;
+}
+#serveplat1{
+	position:relative;
+	left:240px;
+	font-size:1em;
+	color:white;
+	font-weight:bold;
+	width:50px;
+	height:50px;
+	text-align:center;
+	background-color:#8f8fcc;
+}
+#serveplat2{
+	position:relative;
+	top:-50px;
+	left:670px;
+	font-size:1em;
+	color:white;
+	font-weight:bold;
+	width:50px;
+	height:50px;
+	text-align:center;
+	background-color:#8f8fcc;
+}
+
+div table tr td div {
+	color:white;
+	padding-left:5px;
+	font-size:1.5em;
+	margin:auto;
+	text-align:center;
+}
+
+.square{
+	position:relative;
+	top:0px;
+	width:32px;
+	height:32px;
+	border:1px solid black;
+	background-color:#8888ff;
+}
+.square:hover{
+	
+	background-color:#ccccff;
+	cursor:pointer;
+}
+.square2{
+	position:relative;
+	top:36px;
+	width:32px;
+	height:32px;
+	float:left;
+	border:1px solid black;
+	background-color:#8888ff;
+}
+
+#table1{
+	position:relative;
+	top:40px;
+}
+#table2{
+	position:relative;
+	top:32px;
+}
+
+div table #td5,#td12,#td18,#td25{
+	padding-left:40px;
+}
+//服务端列表显示
+table tr td:hover{
+	color:red;
+	cursor:pointer;
+	background-color:#0000ff;
+}
+
+#ifupdatenow{
+	position:absolute;
+	left:300px;
+	top:300px;
+	width:600px;
+	height:100px;
+	background:url('../../images/bgm.jpg');
+	display:none;
+	color:black;
+	font-weight:bold;
+	
+}
+#ifupdatenow div{
+	position:relative;
+	left:50px;
+	top:20%;
+	
+}
+#ifupdatenow  #con_button{
+	position:relative;
+	left:80%;
+	top:20%;
+	
+}
+#ifupdatenow  #con_button input{
+	background:url('../../images/queren.png'); 
+	border:0px solid white;
+	width:52px;
+	height:53px;
+	
+}
+#ifupdatenow  #con_button input:hover{
+	cursor:pointer;
+	background:url('../../images/queren_hover.png'); 
+	
+}
+#validate{
+	position:relative;
+	font-size:0.618em;
+	left:370px;
+	top:-90px;
+	
+}
+
+#hover_showpositioncode{
+	position:relative;
+	left:0%;
+	top:-25px;
+	display:none;
+	
+}
+
+fieldset{
+	border-style:groove;
+	border-width:thin medium thick;
+	
+}

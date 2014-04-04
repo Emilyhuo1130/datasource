@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ucs.cctv.Pojo">
+    <class name="MonitorGroup" table="monitor_group" catalog="cctv_manage">
+        <id name="groupId" type="java.lang.Integer">
+            <column name="group_id" />
+            <generator class="identity" />
+        </id>
+        <property name="groupName" type="string">
+            <column name="group_Name" length="50" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" />
+        </property>
+         <set name ="cameraMerbers" table="camera_group"  cascade="save-update" lazy="false">
+            <key column="group_id"/>
+            <many-to-many column="camera_id" class="CameraInfo"/>
+        </set>
+        <set name ="operators" table="operator_group"  cascade="save-update" lazy="false">
+            <key column="group_id"/>
+            <many-to-many column="operator_id" class="OperatorInfo"/>
+        </set>
+    </class>
+</hibernate-mapping>

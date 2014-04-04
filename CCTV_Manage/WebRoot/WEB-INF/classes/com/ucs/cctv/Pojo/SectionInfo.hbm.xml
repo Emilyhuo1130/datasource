@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-11-21 8:42:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.ucs.cctv.Pojo">
+    <class name="SectionInfo" table="section_info" catalog="cctv_manage">
+        <id name="sectionId" type="java.lang.Integer">
+            <column name="section_id" />
+            <generator class="identity" />
+        </id>
+        <property name="sectionName" type="string">
+            <column name="section_Name" length="255" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="255" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,3 @@
+INFO main test.TestGson - This is userFrom Json string:{"name":"gao","password":"1111"}
+     ERROR main test.TestGson - This is userFrom Json string:{"name":"gao","password":"1111"}
+     

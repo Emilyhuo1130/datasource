@@ -1,0 +1,226 @@
+
+ /*页面 body class定义*/
+body {
+	font-size: 12px;
+	color: #333333;
+	SCROLLBAR-FACE-COLOR: eeeeee;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #ffffff;
+	SCROLLBAR-ARROW-COLOR: #c4c8d2;
+	scrollbar-3d-light-color: #ffffff;
+	scrollbar-dark-shadow-color: #ffffff;
+	
+}
+
+/*页面input控件定义*/
+input{
+	border: 1px solid #999999;
+	font-size: 12px;
+	margin-right: 6px;
+
+}
+body textarea {border: 1px solid #999999;}
+/*页头字体 class 定义*/
+.page-title {
+	font-size: 13px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: bbbbbb;
+	border-right-color: #bbbbbb;
+	border-bottom-color: #bbbbbb;
+	border-left-color: #bbbbbb;
+	font-weight: bold;
+	color: #000000;
+}
+
+/*页面表格文字头 class定义*/
+legend {
+	padding-left: 7px;
+	padding-right: 7px;
+	color: #333333;
+	font-size: 12px;
+}
+
+/*页面表格td class定义*/
+
+td {
+	font-size: 12px;
+	color: #333333;
+	word-break: break-all;
+}
+/*页面按钮 class定义*/
+.short-button {
+	background-image: url(../images/button_short.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 20px;
+	width: 70px;
+	color: #000000;
+	padding-top: 2px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+
+
+/*页面form  class定义*/
+form {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*页头table class  定义*/
+table.table_title {
+   
+  align: center;
+  cellpadding: 3;
+  cellspacing: 0;
+   width: 98%;
+  border: 2;
+ }
+/*页面按钮区table class 定义*/
+table.table_control {
+   width:100%;
+   border: 0;
+  cellpadding: 0;
+  cellspacing: 0;
+}
+
+/*页面查询区table class 定义*/
+table.table_query {
+  width: 90%;
+  height: 50;
+  border: 1px;
+  cellpadding: 0;
+  cellspacing: 0;
+}
+
+/*页面编辑区table class  定义*/
+table.table_edit {
+  border: 1px;
+  cellpadding: 5;
+  cellspacing: 0;
+  align:center;
+  
+}
+ /**
+add
+**/
+/*页面数据列表 table class 定义 */
+table.tablesorter {
+	font-family: arial;
+	font-size: 15pt;
+	border-collapse: collapse;
+	text-align: center;
+	margin-top: 5px;
+	background-color:#fcfcfc;
+}
+
+table.tablesorter thead tr th,table.tablesorter tfoot tr th  {
+	/*background-color: #D5E3EA;*/
+	background-color: #E6EEEE;
+	border: 1px solid #C2C2C2;
+	font-size: 10pt;
+	padding: 4px;
+}
+
+table.tablesorter thead th a {
+	text-decoration: none;
+}
+
+table.tablesorter thead tr .sortable {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter tbody td {
+	padding: 4px;
+	border: 1px solid #C2C2C2;
+}
+
+/*xuhuawei-start;*/
+ 
+table.tablesorter thead tr   {
+		background-color:expression('#F0F0F6,#FFFFFF'.split(',')[rowIndex%2]); 
+}
+/*bxuhauwei-end;*/
+
+table.tablesorter tbody tr {
+	background-color:expression('#F0F0F6,#FFFFFF'.split(',')[rowIndex%2]); 
+}
+
+
+table.tablesorter tbody tr a {
+	text-decoration: none;
+}
+
+table.tablesorter tbody tr a:hover {
+	text-decoration: underline;
+}
+
+table.tablesorter tbody tr .edit {
+	color: #EC9627;
+}
+
+table.tablesorter tbody tr .delete {
+	color: #CA0705;
+}
+
+table.tablesorter tbody tr .view {
+	color: #7EBF6D;
+}
+
+table.tablesorter tbody tr .other1 {
+	color: #155F8E;
+}
+table.tablesorter tbody tr .other2 {
+	color: #BB9B60;
+}
+
+table.tablesorter tbody tr .other3 {
+	color: #8FD401;
+}
+
+table.tablesorter thead tr .sortUp {
+	background-image: url(asc.gif);
+		background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter thead tr .sortDown {
+	background-image: url(desc.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter thead tr .sortUp,table.tablesorter thead tr .sortDown
+	{
+	background-color: #8dbdd8;
+}
+fieldset {
+	width: 98%;
+	border: 1px solid #999999;
+	padding: 10px
+}
+legend {
+	padding-left: 7px;
+	padding-right: 7px;
+	color: #333333;
+	font-size: 12px;
+}
+
