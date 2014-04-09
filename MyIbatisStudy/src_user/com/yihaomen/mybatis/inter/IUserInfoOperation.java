@@ -8,7 +8,7 @@ import com.yihaomen.mybatis.model.UserInfo;
 import com.yihaomen.mybatis.req.ReqGetUser;
 
 public interface IUserInfoOperation {
-	//ÕâÀïÃæÓĞÒ»¸ö·½·¨Ãû selectUserByID ±ØĞëÓë UserInfo.xml ÀïÃæÅäÖÃµÄ select µÄid ¶ÔÓ¦£¨<select id="selectUserByID"£©
+	//è¿™é‡Œé¢æœ‰ä¸€ä¸ªæ–¹æ³•å selectUserByID å¿…é¡»ä¸ UserInfo.xml é‡Œé¢é…ç½®çš„ select çš„id å¯¹åº”ï¼ˆ<select id="selectUserByID"ï¼‰
 	public UserInfo selectUserByID(int id);
 	public UserInfo selectUserByName(String name);
 	public List<UserInfo> selectALLKileName(String name);

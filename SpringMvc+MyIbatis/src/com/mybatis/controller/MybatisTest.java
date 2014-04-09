@@ -33,12 +33,12 @@ public class MybatisTest {
 		face.updateUserInfo(user);
 		return face.selectUserByID(4);
 	}
-	//·ÖÒ³
+	//åˆ†é¡µ
 	@RequestMapping(value="/getAllusers")
 	@ResponseBody
 	public List<UserInfo> getAllusers(){
-		int pageCount=1;//µÚÒ»Ò³
-		int pageSize=2;//Ã¿Ò³Á½Ìõ
+		int pageCount=1;//ç¬¬ä¸€é¡µ
+		int pageSize=2;//æ¯é¡µ2æ¡
 		Page_ page=new Page_();
 		page.setOffset((pageCount-1)*pageSize);
 		page.setPageSize(pageSize);
