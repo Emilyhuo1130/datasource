@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.inter.IUserInfoOperation">
+<!-- 这里namespace必须是IUserInfoOperation接口的路径，
+	不然要运行的时候要报错 “is not known to the MapperRegistry”-->
+    <select id="selectUserByID" parameterType="int" resultType="UserInfo">
+        select * from userinfo where id = #{id}
+    </select>
+    <select id="selectUserByName" parameterType="String" resultType="UserInfo">
+    	select * from userinfo where name= #{name}
+    </select>
+    
+    <select id="selectALLKileName" parameterType="String" resultMap="resultListUser">
+    	select * from userinfo where name like #{name}
+    </select>
+    
+    <select id="getAllusers" parameterType="Page_" resultMap="resultListUser" >
+    	select * from userinfo limit#{offset},#{pageSize}
+    </select>
+    
+    <!-- 插数据库用 -->
+    <insert id="addUser" parameterType="UserInfo" useGeneratedKeys="true" keyProperty="id">
+    	insert into userinfo(name,age,infoid) values(#{name},#{age},#{infoid})
+    </insert>
+    <!-- 更新数据库 -->
+    <update id="updateUserInfo" parameterType="UserInfo" >
+    	update userinfo set name=#{name},age=#{age},infoid=#{infoid} where id=#{id}
+    </update>
+    
+    <!-- 删除 -->
+    <delete id="deleteUserinfo" parameterType="int">
+    	delete from userinfo where id=#{id}
+    </delete>
+    
+   
+    
+    
+    <!-- 查询List用 -->
+    <resultMap type="UserInfo" id="resultListUser">
+    	<id column="id" property="id"/>
+    	<result column="name" property="name"/>
+    	<result column="age" property="age"/>
+    	<result column="infoid" property="infoid"/>
+    </resultMap>
+    
+</mapper>
