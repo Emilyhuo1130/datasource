@@ -12,6 +12,7 @@
 		getimage();
 		getLine();
 		getRect();
+		disposeImage();
 	});
 </script>
 </head>
@@ -31,6 +32,10 @@
 	</canvas>
 	<h4>canvas 矩形测试</h4><br/>
 	<canvas id="myCanvas3" width="900" height="280" style="border:1px solid #c3c3c3;">
+			Your browser does not support the canvas element.
+	</canvas>
+	<h4>canvas 图像处理</h4><br/>
+	<canvas id="myCanvas4" width="900" height="280" style="border:1px solid #c3c3c3;">
 			Your browser does not support the canvas element.
 	</canvas>
 </body>

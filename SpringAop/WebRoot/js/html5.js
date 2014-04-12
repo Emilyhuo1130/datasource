@@ -105,3 +105,41 @@ function getRect(){
 	cxt.strokeRect(400,10,700,300);
 	
 }
+/***图像处理**/
+function disposeImage(){
+	var c=document.getElementById("myCanvas4");
+	var ctx=c.getContext("2d");
+	var imagepath="../image/image1.jpg";
+	preImage(imagepath,function(){
+		ctx.drawImage(this,10,10,480,270);
+	});
+	
+	
+	
+}
+
+function preImage(imagepath,callback){
+	var image =new Image();
+	image.src=imagepath;
+	if(image.complete){
+		callback.call(image);
+		return;
+	}
+	image.onload=function(){
+		callback.call(image);
+	};
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
