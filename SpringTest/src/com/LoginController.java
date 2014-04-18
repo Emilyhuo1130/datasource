@@ -110,7 +110,14 @@ public class LoginController {
 	@RequestMapping(value="/testform")
 	@ResponseBody
 	public boolean testform(HttpServletRequest req ,HttpServletResponse res){
-		System.out.println(req.getParameter("email"));
+		res.setHeader("Access-Control-Allow-Origin","*");
+		String username = req.getParameter("username");
+		String passwd = req.getParameter("userpassword");
+		if(username!=null&&passwd!=null){
+			System.out.println(username+"    "+passwd);
+		}else{
+			System.out.println("----------------");
+		}
 		return true;
 	}
 	

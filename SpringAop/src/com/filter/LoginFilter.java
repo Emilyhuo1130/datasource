@@ -33,7 +33,7 @@ public class LoginFilter implements Filter{
 		String url=request.getRequestURI();
 		if(session.getAttribute("Log_name")==null){
 			if(url!=null&&url.indexOf("login")<0){
-				response.sendRedirect("/SpringAop/index.jsp");
+				response.sendRedirect("/SpringAop/jsp/login.jsp");
 				return;
 			}
 		}

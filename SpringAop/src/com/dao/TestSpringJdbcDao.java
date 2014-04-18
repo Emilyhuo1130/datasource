@@ -23,8 +23,8 @@ public class TestSpringJdbcDao implements TestSpringJdbcIInterface {
 		log.info(gson.toJson(list));
 		
 		jdbcTamplate.update("delete from task_particulars where id =?",new Object[]{28});
-		
-		jdbcTamplate.update("update task_particulars set userName=?,taskDetail=? where id=?",new Object[]{"44","55",29});
+		//insert
+		jdbcTamplate.update("update task_particulars set userName=?,taskDetail=? where id=?",new Object[]{"666","55",29});
 		
 		return list;
 	}
