@@ -50,6 +50,28 @@ public class FileUploadController {
 		return true;
 	}
 	
+	/***基于ajax的单文件上传**/
+	@RequestMapping(value="/jsp/ajaxUploadTest")
+	@ResponseBody
+	public boolean ajaxUploadTest(@RequestParam MultipartFile file,HttpServletRequest req) throws IOException{
+		
+		InputStream is = file.getInputStream();
+		String uploadFilePath=req.getSession().getServletContext().getRealPath("/")+"upload/";
+		String filename = file.getOriginalFilename();
+		//File tempfile=new File(uploadFilePath+filename);
+		FileOutputStream fos=new FileOutputStream(uploadFilePath+filename);
+		byte[] b=new byte[8192];
+		int count =0;
+		while((count=is.read(b))>0){
+			fos.write(b,0,count);
+		}
+		fos.close();
+		is.close();
+		
+		return true;
+	}
+	
+	
 	@RequestMapping(value="/jsp/testUpload3")
 	@ResponseBody
 	public boolean testUpload3(HttpServletRequest req,HttpServletResponse res){
@@ -59,4 +81,8 @@ public class FileUploadController {
 		System.out.println(req.getSession().getServletContext().getRealPath("/")+"upload/");
 		return true;
 	}
+	
+	
+	
+	
 }
