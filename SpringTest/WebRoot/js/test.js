@@ -62,3 +62,7 @@ function jsNetRegist(){
     	alert("55555");
     });
 }
+
+function downfile(){
+	location.href="resource/file.zip";
+}

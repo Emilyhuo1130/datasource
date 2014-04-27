@@ -34,8 +34,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <input onclick="changeImagesAddress();" type="button" value="测试springMVC 异步请求"/>
         <input type="text" id="text1"/>
         <br>
-        <input onclick="jsNetRegist();" type="button" value="测试springMVC 跨域请求"/>
-       
+        <input onclick="jsNetRegist();" type="button" value="测试springMVC 跨域请求"/><br/>
+		<a onclick="downfile();" href="#">测试文件下载</a>       
     
   </body>
   <% 	  
