@@ -1,0 +1,5 @@
+2014-05-05 19:04:00 -- WARN main servlet.db.DBUtil - 数据库链接异常！
+     2014-05-05 19:04:26 -- WARN main servlet.db.DBUtil - 数据库链接异常！
+     2014-05-05 19:05:58 -- WARN main servlet.db.DBUtil - 数据库链接异常！
+     2014-05-05 19:06:14 -- WARN main servlet.db.DBUtil - 数据库链接异常！
+     

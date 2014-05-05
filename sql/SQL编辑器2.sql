@@ -102,3 +102,25 @@ end
 
 
 call hello();
+
+--------------------------------------------------------------
+create PROCEDURE pom_name(in username varchar(10),in age int(11))
+begin
+select * from userinfo where userinfo.name=username or userinfo.age=age;
+end;
+
+call pom_name('test',42);
+
+create PROCEDURE select_info(in username varchar(10),in age int(11))
+begin
+if age!=0 and username is null then
+select * from userinfo where userinfo.age=age;
+elseif username is not null then
+select * from userinfo where userinfo.name=username;
+else
+select * from userinfo;
+end if;
+end;
+
+call select_info(null,0);
+
