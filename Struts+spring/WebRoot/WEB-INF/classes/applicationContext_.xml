@@ -12,6 +12,8 @@
   http://www.springframework.org/schema/aop 
   http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
   default-lazy-init="true">
+  
+  
    <!-- 实例化占位符对象 -->
   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
   	<property name="location" value="classpath:jdbc.properties"/>
@@ -28,6 +30,7 @@
   	<property name="minPoolSize" value="${minPoolSize}"/>
   	<property name="maxPoolSize" value="${maxPoolSize}"/>
   	<property name="checkoutTimeout" value="${checkoutTimeout}"/>
+  	
   </bean>
   
   <!-- Spring 整合 Hibernate -->
@@ -39,21 +42,16 @@
   	<!-- 配置 Hibernat 参数 -->
   	<property name="hibernateProperties">
   		<props>
-  			<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</prop>
+  			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
   			<prop key="hibernate.show_sql">true</prop>
   			<prop key="hibernate.format_sql">true</prop>
-  			<prop key="hibernate.cache.use_second_level_cache">true</prop>
-  			<prop key="hibernate.cache.provider_class">org.hibernate.cache.OSCacheProvider</prop>
-  			<prop key="hibernate.cache.use_query_cache">true</prop>
   		</props>
   	</property>
   	
   	<!-- 配置实体映射 -->
   	<property name="mappingResources">
   		<list>
-  			<value>com/softeem/jingdong/entity/UsersBean.hbm.xml</value>
-  			<value>com/softeem/jingdong/entity/GoodsBean.hbm.xml</value>
-  			<value>com/softeem/jingdong/entity/OrderBean.hbm.xml</value>
+  			
   		</list>
   	</property>
   	
@@ -81,7 +79,7 @@
   <!-- 配置事务切面 -->
   <aop:config>
   	<!-- 配置切入点 -->
-  	<aop:pointcut id="txPoint" expression="execution(* com.softeem.jingdong.service..*.*(..))"/>
+  	<aop:pointcut id="txPoint" expression="execution(* com.my.strutsTest.service..*.*(..))"/>
   	<aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>
   </aop:config>
   
@@ -89,5 +87,6 @@
   <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
   	<property name="sessionFactory" ref="sessionFactory"/>
   </bean>
+
   
 </beans>

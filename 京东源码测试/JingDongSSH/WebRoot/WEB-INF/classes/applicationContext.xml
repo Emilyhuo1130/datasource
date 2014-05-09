@@ -12,8 +12,7 @@
   http://www.springframework.org/schema/aop 
   http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
   default-lazy-init="true">
-  
-  <!-- 实例化占位符对象 -->
+   <!-- 实例化占位符对象 -->
   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
   	<property name="location" value="classpath:jdbc.properties"/>
   </bean>
