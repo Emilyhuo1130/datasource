@@ -19,40 +19,27 @@ public class UtilsController {
 	static Logger log = Logger.getLogger(UtilsController.class);
 	@Resource
 	private UtilsInterface interFace;
-	public void setInterFace(UtilsInterface interFace) {
-		this.interFace = interFace;
-	}
-	static Gson gson;
-	static Boolean flag=false;
+	Gson gson=new Gson();
 	
 	/***显示项目 select下拉菜单**/
 	@RequestMapping(value = "public/select_project")
 	@ResponseBody
 	public List<String> select_project(){
-		List<String> list =interFace.select_project();
-		Gson gson=new Gson();
-		log.info("显示项目 select下拉菜单"+gson.toJson(list));
-		
-		return list;
+		return interFace.select_project();
 	}
 	
 	/***显示第几周到第几周下拉菜单**/
 	@RequestMapping(value = "public/select_weeks")
 	@ResponseBody
 	public List<Integer> select_weeks(){
-		List<Integer> list =interFace.select_weeks();
-		Gson gson=new Gson();
-		log.info("显示第几周到第几周下拉菜单"+gson.toJson(list));
-		return list;
+		return interFace.select_weeks();
 	}
 	
 	/***显示第几周**/
 	@RequestMapping(value = "public/show_thisweek")
 	@ResponseBody
 	public int show_thisweek(){
-		String week =interFace.show_thisweek();
-		log.info("显示第几周   本周是第"+week+"周");
-		return Integer.parseInt(week);
+		return Integer.parseInt(interFace.show_thisweek());
 	}
 	
 }
