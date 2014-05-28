@@ -7,6 +7,7 @@
 	
 	//回调函数
 	function  callBack1(id){
+		
 		if(id=="yes"){
 			Ext.MessageBox.alert("修改成功","update secuess");
 		}else{
@@ -27,6 +28,7 @@
 		icon:Ext.MessageBox.QUESTION,
 		fn:callBack1
 		});
+		
 	}
 	
 
