@@ -58,7 +58,7 @@ public class ProjectImpl extends HibernateDaoSupport implements Project {
 	/**管理员     项目管理  添加项目**/
 	public Boolean do_addProject(ProjectInfo info) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().save(info);
+		this.getHibernateTemplate().save(info);
 		return true;
 	}
 	/**管理员  显示项目***/
@@ -137,7 +137,7 @@ public class ProjectImpl extends HibernateDaoSupport implements Project {
 			}
 			
 			final String hql=buf.toString();
-			List<TaskParticulars> infoList=getHibernateTemplate().find(hql);
+			List<TaskParticulars> infoList=this.getHibernateTemplate().find(hql);
 			float AllDays = 0 ;
 			Project_Statistics statis=new Project_Statistics();
 			for(TaskParticulars info:infoList){
@@ -150,7 +150,7 @@ public class ProjectImpl extends HibernateDaoSupport implements Project {
 			satisticsList.add(statis);
 		}else{
 			String hql_findProject="select distinct projectName from TaskParticulars";
-			List<String> pro_list=getHibernateTemplate().find(hql_findProject);
+			List<String> pro_list=this.getHibernateTemplate().find(hql_findProject);
 			for(String name:pro_list){
 				buf=new StringBuffer();
 				buf.append( "from TaskParticulars where projectName = '"+name+"' ");
@@ -195,7 +195,7 @@ public class ProjectImpl extends HibernateDaoSupport implements Project {
 		if((userName==null)||(userName.length()==0)){
 			String hql_find_user="select distinct userName from TaskParticulars where projectName= '"+projectName+"' and " +
 			"commitDare >= '"+starTime+"' and commitDare <= '"+endTime+"' ";
-			name_list=getHibernateTemplate().find(hql_find_user);
+			name_list=this.getHibernateTemplate().find(hql_find_user);
 		}else{
 			name_list.add(userName);
 		}
@@ -208,7 +208,7 @@ public class ProjectImpl extends HibernateDaoSupport implements Project {
 					" and userName='"+user_name+"'" +
 							" and  commitDare >= '"+starTime+"'and commitDare <= '"+endTime+"' ";
 			
-			List<TaskParticulars> infoList=getHibernateTemplate().find(hql);
+			List<TaskParticulars> infoList=this.getHibernateTemplate().find(hql);
 			Project_Statistics_details detail=new Project_Statistics_details();
 			detail.setProjectName(projectName);
 			detail.setUserName(user_name);
@@ -268,13 +268,10 @@ public class ProjectImpl extends HibernateDaoSupport implements Project {
 	
 	/***根据id查找项目信息***/
 	public ProjectInfo do_findProjectsByID(int id) {
-		// TODO Auto-generated method stub
-		ProjectInfo info=getHibernateTemplate().get(ProjectInfo.class, id);
-		return info;
+		return this.getHibernateTemplate().get(ProjectInfo.class, id);
 	}
 	/***管理员  更新项目信息**/
 	public Boolean do_updateProjectsByID(ProjectInfo info) {
-		// TODO Auto-generated method stub
 		getHibernateTemplate().update(info);
 		return true;
 	}

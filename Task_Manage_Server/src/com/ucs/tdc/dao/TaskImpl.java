@@ -144,7 +144,7 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 	public List<String> do_select_AllUser() {
 		// TODO Auto-generated method stub
 		String hql="select distinct userName from TaskParticulars ";
-		List<String> list=getHibernateTemplate().find(hql);
+		List<String> list=this.getHibernateTemplate().find(hql);
 		return list;
 	}
 	/***返回周计划总页数**/
@@ -155,7 +155,7 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 		String hql="select count(*) from Weektask where " +
 				"weekNo="+weekNo+" and userAccount = '"+userAccount+"' and updateTime >'"+backyear+"' and updateTime <= '"+year+"'";
 		System.out.println(hql);
-		List<Integer> list=getHibernateTemplate().find(hql);
+		List<Integer> list=this.getHibernateTemplate().find(hql);
 		 Object obj=(Object)list.get(0);
 		 int totalRows=Integer.parseInt(obj.toString());
 		if (totalRows % pageSize == 0) {
@@ -173,7 +173,7 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 		String hql="from Weektask where " +
 				"weekNo = "+weekNo+" " +
 						"and userAccount = '"+userAccount+"' and updateTime >'"+backyear+"' and updateTime <= '"+year+"'";
-		List<Weektask> list=getHibernateTemplate().find(hql);
+		List<Weektask> list=this.getHibernateTemplate().find(hql);
 		if(list.size()>0){
 			SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 			for(Weektask info:list){
@@ -199,25 +199,25 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 	/***通过id查找周计划任务**/
 	public Weektask do_findNextWeekTaskById(int id) {
 		// TODO Auto-generated method stub
-		Weektask info=getHibernateTemplate().get(Weektask.class, id);
+		Weektask info=this.getHibernateTemplate().get(Weektask.class, id);
 		return info;
 	}
 	/***更新周计划任务**/
 	public Boolean do_updateNextWeekTask(Weektask task) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().update(task);
+		this.getHibernateTemplate().update(task);
 		return true;
 	}
 	/**添加下周计划任务**/
 	public Boolean do_addNextWeekTask(Weektask task) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().save(task);
+		this.getHibernateTemplate().save(task);
 		return true;
 	}
 	/***删除周计划任务***/
 	public Boolean do_deleteWeekTask(Weektask info) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().delete(info);
+		this.getHibernateTemplate().delete(info);
 		return true;
 	}
 	
@@ -243,7 +243,7 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 		final String  hql=buf.toString();
 		String hqlcount=bufcount.toString();
 		int totalPage=0;
-		List<Integer> listcount=getHibernateTemplate().find(hqlcount);
+		List<Integer> listcount=this.getHibernateTemplate().find(hqlcount);
 		 Object obj=(Object)listcount.get(0);
 		 int totalRows=Integer.parseInt(obj.toString());
 		if (totalRows % pageSize == 0) {
@@ -299,7 +299,7 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 		String hqlcount=bufcount.toString();
 		final String hql=buf.toString();
 		int totalPage=0;
-		List<Integer> listcount=getHibernateTemplate().find(hqlcount);
+		List<Integer> listcount=this.getHibernateTemplate().find(hqlcount);
 		 Object obj=(Object)listcount.get(0);
 		 int totalRows=Integer.parseInt(obj.toString());
 		if (totalRows % pageSize == 0) {
@@ -387,20 +387,20 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 	public UserInfo do_getMyUserInfo(String userAccount) {
 		// TODO Auto-generated method stub
 		String hql="from UserInfo where userAccount= '"+userAccount+"'";
-		List<UserInfo>infoList=getHibernateTemplate().find(hql);
+		List<UserInfo>infoList=this.getHibernateTemplate().find(hql);
 		UserInfo info=infoList.get(0);
 		return info;
 	}
 	/***普通用户 修改个人信息**/
 	public Boolean do_modifyMyInfo(UserInfo oldinfo) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().update(oldinfo);
+		this.getHibernateTemplate().update(oldinfo);
 		return true;
 	}
 	/**根据id来获取某个历史任务***/
 	public TaskParticulars do_findHitoryTaskById(int id) {
 		// TODO Auto-generated method stub
-		TaskParticulars info=getHibernateTemplate().get(TaskParticulars.class, id);
+		TaskParticulars info=this.getHibernateTemplate().get(TaskParticulars.class, id);
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 		info.setFarmatDate(sdf.format(info.getCommitDare()));
 		info.setCommitDare(null);
@@ -409,7 +409,7 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 	/**根据id来获取某个历史任务***/
 	public TaskParticulars do_findHitoryTaskByIdNoModify(int id) {
 		// TODO Auto-generated method stub
-		TaskParticulars info=getHibernateTemplate().get(TaskParticulars.class, id);
+		TaskParticulars info=this.getHibernateTemplate().get(TaskParticulars.class, id);
 		return info;
 	}
 	
@@ -417,13 +417,13 @@ public class TaskImpl extends HibernateDaoSupport implements Task{
 
 	public Boolean do_updateHitoryTask(TaskParticulars infonew) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().update(infonew);
+		this.getHibernateTemplate().update(infonew);
 		return true;
 	}
 	/***根据id来删除某个历史任务**/
 	public Boolean do_deleteHistoryMission(TaskParticulars infoold) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().delete(infoold);
+		this.getHibernateTemplate().delete(infoold);
 		return true;
 	}
 

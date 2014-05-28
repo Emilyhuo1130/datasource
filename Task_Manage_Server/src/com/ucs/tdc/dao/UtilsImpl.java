@@ -21,10 +21,9 @@ public class UtilsImpl  extends HibernateDaoSupport implements UtilsInterface{
     }
 
 	public List<String> select_project() {
-		// TODO Auto-generated method stub
 		List<String> list;
 		String hql="select distinct projectName from ProjectInfo";
-		list=getHibernateTemplate().find(hql);
+		list=this.getHibernateTemplate().find(hql);
 		return list;
 	}
 

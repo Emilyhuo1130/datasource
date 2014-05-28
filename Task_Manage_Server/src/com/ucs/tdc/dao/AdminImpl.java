@@ -32,7 +32,6 @@ public class AdminImpl extends HibernateDaoSupport implements Admin{
 		String hql="from UserInfo where userAccount=?";
 		 Object[] params={info.getUserAccount()};
 		 List<UserInfo> list =this.getHibernateTemplate().find(hql,params);
-		 System.out.println(list.size());
 		 UserInfo var_info;
 		 if(list.size()!=0){
 			 var_info =list.get(0);
@@ -72,8 +71,8 @@ public class AdminImpl extends HibernateDaoSupport implements Admin{
 	/**管理员修改密码前的密码验证***/
 	public Boolean do_verifyAdminPW(String adminName, String password) {
 		// TODO Auto-generated method stub
-		String hql="from AdminInfo where userName= '"+adminName+"' ";
-		List<AdminInfo> list=getHibernateTemplate().find(hql);
+		String hql="from AdminInfo where userName= ?";
+		List<AdminInfo> list=this.getHibernateTemplate().find(hql,new Object[]{adminName});
 		AdminInfo info=list.get(0);
 		if(info.getUserPw().equals(password)){
 			return true;
@@ -83,33 +82,30 @@ public class AdminImpl extends HibernateDaoSupport implements Admin{
 	}
 	/**通过账户名获取管理员账户信息***/
 	public AdminInfo do_findAdminInfoByAccount(String adminName) {
-		// TODO Auto-generated method stub
-		String hql="from AdminInfo where userName= '"+adminName+"' ";
-		List<AdminInfo> list=getHibernateTemplate().find(hql);
-		AdminInfo info=list.get(0);
-		return info;
+		String hql="from AdminInfo where userName=? ";
+		List<AdminInfo> list=this.getHibernateTemplate().find(hql,new Object[]{adminName});
+		return list.get(0);
 	}
 	/**管理员修改自己密码**/
 	public Boolean do_modifyAdminInfo(AdminInfo info) {
-		// TODO Auto-generated method stub
-		getHibernateTemplate().update(info);
+		this.getHibernateTemplate().update(info);
 		return true;
 	}
 
 	/***管理员添加用户**/
 	public Boolean do_addUser(UserInfo info) {
-		getHibernateTemplate().save(info);
+		this.getHibernateTemplate().save(info);
 		return true;
 	}
 	/***管理员-更新用户**/
 	public Boolean do_updateUser(UserInfo info) {
-		getHibernateTemplate().update(info);
+		this.getHibernateTemplate().update(info);
 		return true;
 	}
 	/***管理员 删除普通用户**/
 	public Boolean do_deleteUser(UserInfo info) {
 		if(info.getId()!=0){
-			getHibernateTemplate().delete(info);
+			this.getHibernateTemplate().delete(info);
 		}
 		return true;
 	}
@@ -162,18 +158,14 @@ public class AdminImpl extends HibernateDaoSupport implements Admin{
 	}
 	/***管理员要修改某个人的信息  返回对应id的信息**/
 	public UserInfo do_findAllUserbyId(int id) {
-		// TODO Auto-generated method stub
-		UserInfo info=getHibernateTemplate().get(UserInfo.class, id);
-		return info;
+		return this.getHibernateTemplate().get(UserInfo.class, id);
 	}
 	
 	/****根据用户名查询姓名*/
 	public String do_findUserName(String accountName) {
-		// TODO Auto-generated method stub
-		String hql="select userName from UserInfo where userAccount= '"+accountName+"' ";
-		List<String> list=getHibernateTemplate().find(hql);
-		String userName=list.get(0);
-		return userName;
+		String hql="select userName from UserInfo where userAccount= ?";
+		List<String> list=this.getHibernateTemplate().find(hql,new Object[]{accountName});
+		return list.get(0);
 	}
 
 	
