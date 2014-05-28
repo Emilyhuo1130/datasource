@@ -275,6 +275,12 @@ public class UserController {
 	@ResponseBody
 	public boolean addPic_Linkage(HttpServletRequest request,HttpServletResponse response) {
 		response.setHeader("Access-Control-Allow-Origin","*");
+		
+		
+		
+		
+		
+		
 		String  linkageStr=null;
 		try {
 			StringBuffer inputString = new StringBuffer();
