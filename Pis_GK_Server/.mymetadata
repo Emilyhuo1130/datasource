@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="Pis_GK_Server"
+  name="Ps_GK_Server"
   id="myeclipse.1375083146575"
   context-root="/Pis_GK_Server"
   j2ee-spec="5.0"
-  archive="Pis_GK_Server.war">
+  archive="Ps_GK_Server.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
