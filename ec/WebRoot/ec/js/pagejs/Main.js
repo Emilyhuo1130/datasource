@@ -8,11 +8,6 @@ Ext.EventManager.onWindowResize(function(width,height){
 Ext.onReady(function(){
 	
 	//
-	var column=new Ext.grid.ColumnModel()
-	
-	var grid=new Ext.grid.GridPanel({
-		
-	});
 	
 	
 	
@@ -82,7 +77,7 @@ Ext.onReady(function(){
 			}
 		]
 	});
-})
+});
 
 
 

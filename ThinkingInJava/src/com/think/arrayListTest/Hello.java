@@ -29,7 +29,7 @@ public class Hello<T,E>{
 	
 
 	public static void main(String[] args){
-		Hello<Person,String> h=new Hello<Person,String>(new Person(), "4444");
+		Hello<Person,String> h=new Hello<Person,String>(new Person(), "44442");
 		h.getA().getName();
 	}
 	
