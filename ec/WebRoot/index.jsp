@@ -2,6 +2,9 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="com.org.zhang.controller.UserController"%>
+<%@ page import="java.io.*"%>
+<%@ page import="java.util.List"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,6 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%
 	String userName=(String)session.getAttribute("userName");
 	String dd="99999";
+	String test =UserController.getString();
  %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -43,6 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     站点正在开发阶段，界面美化将会陆续进行（工作很忙的。。。。），基本的每天的消费记录功能可以使用  项目开始开发时间为2014-5-25<br>
     由于数据量小，主页暂时无法开放大规模数据统计模块。<br/>
    此项目是个人爱好项目， 如果你有好的建议和意见，请给开发者<a href="#" id="commitbug">留言</a><br/>
+   <br/>
+ 
    
    
    

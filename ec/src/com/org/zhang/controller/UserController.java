@@ -21,11 +21,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.gson.Gson;
 import com.org.zhang.pojo.UsersInfo;
 import com.org.zhang.pojo.tuils.Parameters;
 import com.org.zhang.service.face.UserControllerFace;
-import com.sun.faces.context.RequestMap;
+
 
 
 
@@ -35,6 +34,13 @@ public class UserController {
 	Logger log=Logger.getLogger(UserController.class);
 	@Resource
 	private UserControllerFace service;
+	
+	
+	
+	public static String getString(){
+		return "eeeee";
+	}
+	
 	
 	
 	/**

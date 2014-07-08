@@ -3,13 +3,8 @@ package com.org.zhang.pojo;
  * dayExpenseProject
  * 用户每天支出项目
  * **/
-public class DayExpenseProject {
-	private int id;
-	private String userName;
-	private int userAge;
-	private String sex;
-	private String inProvince;
-	private String inCity;
+public class DayExpenseProject extends BaseUserInfo{
+	
 	private String thisDay;//这一天
 	private int everyDayBoardWages;//每天的伙食费
 	private int giftCost;//礼品开支
@@ -25,42 +20,7 @@ public class DayExpenseProject {
 	private int electronCost;//电子消费品支出
 	private int otherCost;//其他消费支出
 	
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public int getUserAge() {
-		return userAge;
-	}
-	public void setUserAge(int userAge) {
-		this.userAge = userAge;
-	}
-	public String getInProvince() {
-		return inProvince;
-	}
-	public void setInProvince(String inProvince) {
-		this.inProvince = inProvince;
-	}
-	public String getInCity() {
-		return inCity;
-	}
-	public void setInCity(String inCity) {
-		this.inCity = inCity;
-	}
+	
 	public String getThisDay() {
 		return thisDay;
 	}
