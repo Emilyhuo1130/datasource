@@ -122,4 +122,26 @@ public class LoginController {
 	}
 	
 	
+	
+	/***
+	 * ip mac测试
+	 * **/
+
+	@RequestMapping(value="/testmac")
+	@ResponseBody
+	public String testmac(HttpServletRequest request ,HttpServletResponse res){
+		 String ip = request.getHeader("x-forwarded-for");   
+	        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {   
+	            ip = request.getHeader("Proxy-Client-IP");   
+	        }   
+	        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {   
+	            ip = request.getHeader("WL-Proxy-Client-IP");   
+	        }   
+	        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {   
+	            ip = request.getRemoteAddr();   
+	        }   
+	        return ip; 
+	}
+	
+	
 }
