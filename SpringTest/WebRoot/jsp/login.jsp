@@ -97,5 +97,36 @@ password:
 	</form>
   
   
+  <h3>下载测试</h3>
+  <br/>
+  <a onclick="testdownload()">下载</a>
+  <script type="text/javascript">
+  		function testdownload(){
+  			window.open("../download.do");
+  		}
+  		
+  		function PostJSONQuery()
+  		{
+  		  $.ajax({
+  		    url: "../download.do",
+  		    type:"post",
+  		    processData : true,
+  		    data: {},
+  		    dataType: "json",
+  		    success: function(response) {
+  		     
+  		    },
+  		    error: function (xhr, ajaxOptions, thrownError) {
+  		    	alert("error");
+  		    }
+  		  });
+  		}
+  </script>
+  
+  <h3>异步下载测试</h3>
+  <br/>
+  <a onclick="PostJSONQuery()">下载</a>
+  
+  
   </body>
 </html>
