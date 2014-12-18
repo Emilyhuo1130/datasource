@@ -66,6 +66,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 }
   		
 </script>
+<script type="text/javascript">
+function test(){
+	/* var editor=CKEDITOR.replace( 'editor1' );
+	var s1=editor.document.getBody().getText(); //取得纯文本
+
+	var s2=editor.document.getBody().getHtml(); //取得html文本 */
+	var str=CKEDITOR.instances.editor1.getData();
+	alert(str)
+	
+}
+</script>
 </head>  
   <body>  
 <%--<ckfinder:ckfinder basePath="/CKFinderJava_0100/ckfinder/" width="700" height="500" /> --%>  
@@ -76,6 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </textarea>  
 <input type="submit" value="Submit" />  
 </form>  
+<input type="button" value="ceshi" onclick="test();" /> 
 <ckfinder:setupCKEditor basePath="ckfinder/" editor="editor1" />  
 <ckeditor:replace replace="editor1" basePath="ckeditor/" />  
   </body>  
