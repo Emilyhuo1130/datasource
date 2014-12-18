@@ -158,17 +158,16 @@ public class LoginController {
 	@ResponseBody
 	//window.open("../download.do");
 	public void download(HttpServletRequest request ,HttpServletResponse response) throws IOException{
-		 	response.setContentType("text/html;charset=UTF-8");  
-	        request.setCharacterEncoding("UTF-8");  
+			request.setCharacterEncoding("UTF-8");  
 	        BufferedInputStream bis = null;  
 	        BufferedOutputStream bos = null;  
 	  
 	        String downLoadPath = "D:/WOTBox/config.json";  
 	  
 	        long fileLength = new File(downLoadPath).length();  
+	        response.setContentType("text/html;charset=UTF-8");  
 	        response.setContentType("application/octet-stream; charset=UTF-8");
-	        response.setHeader("Content-disposition", "attachment; filename="  
-	                + new String("config.json".getBytes("utf-8"), "ISO8859-1"));  
+	        response.setHeader("Content-disposition", "attachment; filename="   + new String("config.json".getBytes("utf-8"), "ISO8859-1"));  
 	        response.setHeader("Content-Length", String.valueOf(fileLength));  
 	  
 	        bis = new BufferedInputStream(new FileInputStream(downLoadPath));  
