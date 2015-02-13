@@ -9,6 +9,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
+import com.e.AdminInfo;
 import com.e.UserInfo;
 import com.google.gson.Gson;
 import com.interFace.HibernateTestInterface;
@@ -29,8 +30,13 @@ public class HibernateTestDao extends HibernateDaoSupport implements HibernateTe
 	}
 	
 	public boolean update(UserInfo info) {
-		this.getHibernateTemplate().update(info);
+//		this.getHibernateTemplate().update(info);
+		AdminInfo adminInfo = this.getHibernateTemplate().get(AdminInfo.class, 1L);
+		Gson gson=new Gson();
+		System.out.println(gson.toJson(adminInfo));
+		this.getHibernateTemplate().find("from AdminInfo");
 		return true;
 	}
+	
 
 }
