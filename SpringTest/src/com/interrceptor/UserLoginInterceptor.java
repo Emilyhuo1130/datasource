@@ -6,7 +6,10 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
+/****
+ * 拦截器
+ * 
+ * **/
 public class UserLoginInterceptor implements HandlerInterceptor{
 
 	@Override

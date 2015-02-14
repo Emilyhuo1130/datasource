@@ -23,6 +23,7 @@
     -->
     <context:component-scan base-package="com"/>
   
+  	<aop:aspectj-autoproxy/> <!-- 开启AOP -->
   
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
